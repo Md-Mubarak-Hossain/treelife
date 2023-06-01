@@ -1,16 +1,16 @@
 import React from 'react';
 import { Button, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle } from 'reactstrap';
-import tree from '../../components/images/avocado'
+import birot from '../../components/images/birot.jfif';
 import useTitle from '../../hocks/useTitle';
-const Tree = ({ item }) => {
-    useTitle('Tree');
+const Birot = ({ item }) => {
+    useTitle('Birot');
     return (
 
         <div className='p-2'>
             <Card>
                 <CardImg
                     alt="Card image cap"
-                    src={tree}
+                    src={birot}
                     top
                     width="100%" />
                 <CardBody>
@@ -35,4 +35,4 @@ const Tree = ({ item }) => {
     );
 };
 
-export default Tree;
+export default Birot;

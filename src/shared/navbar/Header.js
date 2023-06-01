@@ -20,12 +20,14 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
     const menu = <>
+        <NavbarText className='mx-2 d-flex align-items-stretch'><Link to='/'
+        className='link_style'>Home</Link></NavbarText>
         <NavbarText className='mx-2 d-flex align-items-stretch'><Link to='/tree' className='link_style'>Tree</Link></NavbarText>
         <NavbarText className='mx-2 d-flex align-items-stretch'><Link to='/golmo' className='link_style'>Golmo</Link></NavbarText>
         <NavbarText className='mx-2 d-flex align-items-stretch'><Link to='/birot' className='link_style'>Birot</Link></NavbarText>
         <NavbarText className='mx-2 d-flex align-items-stretch'><Link to='/' 
         className='link_style'>Log out</Link></NavbarText>
-        <NavbarText className='mx-2 d-flex align-items-stretch'><Link to='/login' className='link_style'>Login</Link></NavbarText>
+        <NavbarText className='mx-2 d-flex align-items-stretch'><Link to='/register' className='link_style'>Login</Link></NavbarText>
     </>
     return (
             <Navbar

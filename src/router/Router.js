@@ -3,37 +3,42 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Main from '../layouts/Main';
 import Trees from '../pages/Trees/Trees';
 import Home from '../pages/Home/Home';
+import Golmos from '../pages/Golmo/Golmos';
+import Birots from '../pages/Birot/Birots';
+import Register from '../account/Register';
 
 const Router = () => {
-    const router=createBrowserRouter([
+    const router = createBrowserRouter([
         {
-            path:"/",
-            element:<Main/>,
-            children:[
+            path: "/",
+            element: <Main />,
+            children: [
                 {
-                    path:"/",
-                    element:<Home/>,
+                    path: "/",
+                    element: <Home />,
                 },
                 {
-                    path:"/tree",
-                    element:<Trees/>,
+                    path: "/tree",
+                    element: <Trees />,
                 },
                 {
-                    path:"/golmo",
-                    element:<Trees/>,
+                    path: "/golmo",
+                    element: <Golmos />,
                 },
                 {
-                    path:"/birot",
-                    element:<Trees/>,
+                    path: "/birot",
+                    element: <Birots />,
+                },
+                {
+                    path: "/register",
+                    element: <Register />,
                 }
             ]
-
         },
         {
-            path:'/*',
-            element:<div>404</div>
+            path: '/*',
+            element: <div>404</div>
         }
-        
     ])
     return (
         <RouterProvider router={router} />

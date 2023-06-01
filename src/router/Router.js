@@ -17,13 +17,21 @@ const Router = () => {
                 {
                     path:"/tree",
                     element:<Trees/>,
+                },
+                {
+                    path:"/golmo",
+                    element:<Trees/>,
+                },
+                {
+                    path:"/birot",
+                    element:<Trees/>,
                 }
             ]
 
         },
         {
             path:'/*',
-            Element:<div>404</div>
+            element:<div>404</div>
         }
         
     ])

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '../../components/images/logo.png';
 import {
     Collapse,
     Navbar,
@@ -13,50 +14,42 @@ import {
     DropdownItem,
     NavbarText,
 } from 'reactstrap';
-
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
     const menu = <>
-        <NavItem>
-            <NavLink to="/components/">Components</NavLink>
-        </NavItem>
-        <NavItem>
-            <NavLink to="https://github.com/reactstrap/reactstrap">
-                GitHub
-            </NavLink>
-        </NavItem>
-        <UncontrolledDropdown nav inNavbar>
-            <DropdownToggle nav caret>
-                Options
-            </DropdownToggle>
-            <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
-            </DropdownMenu>
-        </UncontrolledDropdown>
+        <NavbarText className='mx-2 d-flex align-items-stretch'><Link to='/tree' className='link_style'>Tree</Link></NavbarText>
+        <NavbarText className='mx-2 d-flex align-items-stretch'><Link to='/golmo' className='link_style'>Golmo</Link></NavbarText>
+        <NavbarText className='mx-2 d-flex align-items-stretch'><Link to='/birot' className='link_style'>Birot</Link></NavbarText>
+        <NavbarText className='mx-2 d-flex align-items-stretch'><Link to='/' 
+        className='link_style'>Log out</Link></NavbarText>
+        <NavbarText className='mx-2 d-flex align-items-stretch'><Link to='/login' className='link_style'>Login</Link></NavbarText>
     </>
     return (
             <Navbar
                 className="p-2"
-                color="dark"
-                dark
+                color="success"
+                success
                 sticky='top'
             >
-                <NavbarBrand to="/">reactstrap</NavbarBrand>
+                <NavbarBrand to="/" className='d-flex items-center justify-center'>
+                    <img src={logo} alt="TreeLife"/>
+                    <span className='link_style d-md-flex fw-extrabold ms-1 '>Green Tree, Green World</span>         
+                </NavbarBrand>
                 <NavbarToggler onClick={toggle} className='d-sm-block d-md-none' />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mx-auto" 
                     
                     navbar>
                         {menu}
+                    
                     </Nav>
-                    <NavbarText>Simple Text</NavbarText>
                 </Collapse>
                 <Nav className='d-none d-lg-flex'>
                     {menu}
+               
                 </Nav>
             </Navbar>
     );

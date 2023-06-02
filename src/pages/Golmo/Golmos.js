@@ -1,6 +1,6 @@
 import React from 'react';
 import Golmo from './Golmo';
-
+import {LuSearch} from 'react-icons/lu';
 const Golmos = () => {
     const items=[
         { id:1,name:"Tree1",imag:"tree"},
@@ -11,6 +11,12 @@ const Golmos = () => {
     ]
     return (
         <div className="p-3">
+             <div className="input-group rounded mx-md-2 p-2">
+                <input type="search" className="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                <span className="input-group-text border-0" id="search-addon">
+                    <LuSearch className="fas fa-search"></LuSearch>
+                </span>
+            </div>
             <div className='row row-cols-3'>          
                {
                     items.map(item=><Golmo key={item.id} item={item}></Golmo>)

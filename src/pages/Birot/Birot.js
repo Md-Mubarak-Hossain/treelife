@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle } from 'reactstrap';
 import birot from '../../components/images/birot.jfif';
 import useTitle from '../../hocks/useTitle';
+import { Link } from 'react-router-dom';
 const Birot = ({ item }) => {
     useTitle('Birot');
     return (
@@ -26,9 +27,9 @@ const Birot = ({ item }) => {
                     <CardText>
                         This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
                     </CardText>
-                    <Button className='w-100 bg-success'>
+                    <Link to='/birot/details'><Button className='w-100 bg-success'>
                         See Details
-                    </Button>
+                    </Button></Link>
                 </CardBody>
             </Card>
         </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle } from 'reactstrap';
 import tree from '../../components/images/avocado'
 import useTitle from '../../hocks/useTitle';
+import { Link } from 'react-router-dom';
 const Tree = ({ item }) => {
     useTitle('Tree');
     return (
@@ -26,9 +27,9 @@ const Tree = ({ item }) => {
                     <CardText>
                         This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
                     </CardText>
-                    <Button className='w-100 bg-success'>
+                    <Link to='/tree/details'><Button className='w-100 bg-success'>
                         See Details
-                    </Button>
+                    </Button></Link>
                 </CardBody>
             </Card>
         </div>

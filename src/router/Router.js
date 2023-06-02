@@ -6,6 +6,9 @@ import Home from '../pages/Home/Home';
 import Golmos from '../pages/Golmo/Golmos';
 import Birots from '../pages/Birot/Birots';
 import Register from '../account/Register';
+import DetailsGolmo from '../pages/Golmo/DetailsGolmo';
+import DetailsTree from '../pages/Trees/DetailsTree';
+import DetailsBirot from '../pages/Birot/DetailsBirot';
 
 const Router = () => {
     const router = createBrowserRouter([
@@ -21,13 +24,30 @@ const Router = () => {
                     path: "/tree",
                     element: <Trees />,
                 },
+
+                {
+                    path: "/tree/details",
+                    element: <DetailsTree />
+                }
+                ,
                 {
                     path: "/golmo",
-                    element: <Golmos />,
+                    element: <Golmos />
                 },
+
+                {
+                    path: "/golmo/details",
+                    element: <DetailsGolmo />
+                }
+                ,
                 {
                     path: "/birot",
-                    element: <Birots />,
+                    element: <Birots />
+
+                },
+                {
+                    path: "/birot/details",
+                    element: <DetailsBirot />
                 },
                 {
                     path: "/register",

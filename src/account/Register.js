@@ -11,8 +11,8 @@ export default function (props) {
 
   if (authMode === "signin") {
     return (
-      <div className="card bg-dark">
-        <img src={banner} className="card-img" alt="..." />
+      <div className="card">
+        <img src={banner} className="card-img" alt="banner" />
         <div className="card-img-overlay">
           <div className="Auth-form-container">
             <form className="Auth-form">
@@ -58,7 +58,7 @@ export default function (props) {
   }
 
   return (
-    <div className="card bg-dark">
+    <div className="card">
       <img src={banner} className="card-img" alt="..." />
       <div className="card-img-overlay">
         <div className="Auth-form-container">

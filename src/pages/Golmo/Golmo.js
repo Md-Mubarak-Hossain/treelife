@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle } from 'reactstrap';
 import golmo from '../../components/images/golmo.jpg';
 import useTitle from '../../hocks/useTitle';
+import { Link } from 'react-router-dom';
 const Golmo = ({ item }) => {
     useTitle('Golmo');
     return (
@@ -26,9 +27,9 @@ const Golmo = ({ item }) => {
                     <CardText>
                         This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
                     </CardText>
-                    <Button className='w-100 bg-success'>
+                    <Link to='/golmo/details'><Button className='w-100 bg-success'>
                         See Details
-                    </Button>
+                    </Button></Link>
                 </CardBody>
             </Card>
         </div>

@@ -1,33 +1,36 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
+import {FcGoogle} from 'react-icons/fc';
+import {RiInstagramFill} from 'react-icons/ri';
+import {FaFacebookF,FaTwitter,FaGithub,FaLinkedin} from 'react-icons/fa';
 
 const Footer = () => {
     return (
         <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
-            <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
-                <div className='me-5 d-none d-lg-block'>
+            <section className='d-md-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
+                <div className='me-5'>
                     <span>Get connected with us on social networks:</span>
                 </div>
 
                 <div>
                     <Link to='' className='me-4 text-dark'>
-                        <MDBIcon fab icon="facebook-f" />
+                        <FaFacebookF/>
                     </Link>
                     <Link to='' className='me-4 text-dark'>
-                        <MDBIcon fab icon="twitter" />
+                        <FaTwitter/>
                     </Link>
                     <Link to='' className='me-4 text-dark'>
-                        <MDBIcon fab icon="google" />
+                       <FcGoogle/>
                     </Link>
                     <Link to='' className='me-4 text-dark'>
-                        <MDBIcon fab icon="instagram" />
+                       <RiInstagramFill/>
                     </Link>
                     <Link to='' className='me-4 text-dark'>
-                        <MDBIcon fab icon="linkedin" />
+                       <FaLinkedin/>
                     </Link>
                     <Link to='' className='me-4 text-dark'>
-                        <MDBIcon fab icon="github" />
+                       <FaGithub/>
                     </Link>
                 </div>
             </section>
@@ -36,9 +39,9 @@ const Footer = () => {
                 <MDBContainer className='text-center text-md-start mt-5'>
                     <MDBRow className='mt-3'>
                         <MDBCol
-                            md="3"
-                            lg="4"
-                            xl="3"
+                             md={4}
+                             lg={3}
+                             xl={3}
                             className='mx-auto mb-4'
                         >
                             <h6 className='text-uppercase fw-bold mb-4'>
@@ -105,9 +108,9 @@ const Footer = () => {
                         </MDBCol>
 
                         <MDBCol
-                            md="4"
-                            lg="3"
-                            xl="3"
+                            md={4}
+                            lg={3}
+                            xl={3}
                             className='mx-auto mb-md-0 mb-4'
                         >
                             <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>

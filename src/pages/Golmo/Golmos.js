@@ -1,6 +1,7 @@
 import React from 'react';
 import Golmo from './Golmo';
 import {LuSearch} from 'react-icons/lu';
+import { Row } from 'reactstrap';
 const Golmos = () => {
     const items=[
         { id:1,name:"Tree1",imag:"tree"},
@@ -17,11 +18,15 @@ const Golmos = () => {
                     <LuSearch className="fas fa-search"></LuSearch>
                 </span>
             </div>
-            <div className='row row-cols-3'>          
+            <Row 
+            xxl={3}
+            xl={3}
+            lg={3}
+            md={2}>          
                {
                     items.map(item=><Golmo key={item.id} item={item}></Golmo>)
                 }
-        </div>
+        </Row>
         </div>
     );
 };

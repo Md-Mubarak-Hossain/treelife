@@ -1,6 +1,7 @@
 import React from 'react';
 import Tree from './Tree';
 import {LuSearch} from 'react-icons/lu';
+import { Row } from 'reactstrap';
 const Trees = () => {
     const items = [
         { id: 1, name: "Tree1", imag: "tree" },
@@ -17,11 +18,14 @@ const Trees = () => {
                     <LuSearch className="fas fa-search"></LuSearch>
                 </span>
             </div>
-            <div className='row row-cols-3'>
+            <Row  xxl={3}
+            xl={3}
+            lg={3}
+            md={2}>
                 {
                     items.map(item => <Tree key={item.id} item={item}></Tree>)
                 }
-            </div>
+            </Row>
         </div>
     );
 };

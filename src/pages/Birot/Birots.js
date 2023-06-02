@@ -1,6 +1,7 @@
 import React from 'react';
 import Birot from './Birot';
 import {LuSearch} from 'react-icons/lu';
+import { Row } from 'reactstrap';
 const Birots = () => {
     const items=[
         { id:1,name:"Tree1",imag:"tree"},
@@ -17,11 +18,15 @@ const Birots = () => {
                     <LuSearch className="fas fa-search"></LuSearch>
                 </span>
             </div>
-            <div className='row row-cols-3'>          
+            <Row  
+            xxl={3}
+            xl={3}
+            lg={3}
+            md={2}>          
                {
                     items.map(item=><Birot key={item.id} item={item}></Birot>)
                 }
-        </div>
+        </Row>
         </div>
     );
 };

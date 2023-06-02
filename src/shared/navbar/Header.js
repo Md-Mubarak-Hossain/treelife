@@ -40,7 +40,7 @@ const Header = () => {
                     <img src={logo} alt="TreeLife"/>
                     <span className='link_style d-md-flex fw-extrabold ms-1 '>Green Tree, Green World</span>         
                 </NavbarBrand>
-                <NavbarToggler onClick={toggle} className='d-sm-block d-md-none' />
+                <NavbarToggler onClick={toggle} className='d-sm-block d-md-block d-lg-none' />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mx-auto" 
                     

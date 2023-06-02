@@ -1,41 +1,60 @@
 
-.App {
-    background-color: white;
-  }
-  
-  .Auth-form-container {
+  .register-form-container {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100vw;
-    height: 100vh;
   }
   
-  .Auth-form {
-    width: 420px;
+  .register-form {
+    margin-top: 2%;
+    width: 32%;
     box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    border-radius: 8px;
-    background-color: white;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 5px;
+    background-color: rgba(204, 204, 204, 0.542);
   }
   
-  .Auth-form-content {
+  .register-form-content {
     padding-left: 12%;
     padding-right: 12%;
   }
   
-  .Auth-form-title {
+  .register-form-title {
     text-align: center;
     margin-bottom: 1em;
     font-size: 24px;
-    color: rgb(34, 34, 34);
-    font-weight: 800;
+    color: rgb(4, 4, 4);
+    font-weight: 900;
   }
-  
-  label {
-    font-size: 14px;
-    font-weight: 600;
-    color: rgb(34, 34, 34);
+  @media only screen and (max-width: 780px) {
+    .register-form {
+    width: 60%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    }
+    .img{
+      min-height: 400px;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .register-form {
+    width: 90%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    }
+    .register-form-content {
+      padding-left: 12%;
+    
+    }
+    .register-form-title {
+      text-align: center;
+      font-size: 16px;
+      color: rgb(4, 4, 4);
+      font-weight: 400;
+    }
+    .img{
+      min-height: 360px;
+    }
   }
   
